@@ -1,0 +1,17 @@
+Usare un api per geolocalizzazione e riconosce la posizione dell'utente gli dice quali cibi
+famosi ci sono vicino a lui.
+
+Definizione minima di AJAX:
+AJAX = Asynchronous JavaScript And XML.
+AJAX is not a programming language.
+AJAX just uses a combination of:
+    A browser built-in XMLHttpRequest object (to request data from a web server)
+    JavaScript and HTML DOM (to display or use the data)
+
+
+Per JSON che spero in qualche modo di implementare:
+JSON stands for JavaScript Object Notation
+JSON is a lightweight data-interchange format
+JSON is plain text written in JavaScript object notation
+JSON is used to send data between computers
+JSON is language independent *

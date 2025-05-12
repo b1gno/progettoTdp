@@ -8,11 +8,16 @@
     src: url('../fonts/KeramiqueScript_PERSONAL_USE_ONLY.otf');
 }
 
+@font-face {
+    font-family: ubuntu;
+    src: url('../fonts/Ubuntu-font/Ubuntu-Regular.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: ubuntu;
 }
 
 html{
@@ -25,7 +30,7 @@ body {
 }
 
 header {
-    background: #fff;
+    background: #FEFAE0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
     justify-content: space-between;
@@ -99,7 +104,7 @@ nav ul li .nav-button {
 
 /* parte centrale*/
 .centro {
-    background: url('../images/image3.png') no-repeat center center/cover;
+    background: url('../images/eccellenze.jpg') no-repeat center center/cover;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -197,13 +202,14 @@ button{
 }
 
 .primo-piano {
-    padding: 4rem 2rem;
+    padding: 2rem;
     text-align: center;
+    background-color: #FEFAE0;
 }
 
 .primo-piano h2 {
-    margin-bottom: 2rem;
     font-size: 2rem;
+    padding: 1rem;
 }
 
 .products-grid {
@@ -249,9 +255,13 @@ button{
 
 
 .newsletter {
-    background: #f4f4f4;
+    background: #FAEDCD;
     padding: 3rem 2rem;
     text-align: center;
+    width: fit-content;
+    margin: 2rem auto;
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 .newsletter form {
@@ -267,7 +277,7 @@ button{
 
 
 footer {
-    background: #333;
+    background: #354f52;
     color: #fff;
     text-align: center;
     padding: 2rem;
@@ -295,6 +305,32 @@ form button:hover{
 
 
 /* stile per sub-page */
+
+/* Centro per vini */
+.centro-vini{
+    background: url('../images/vini.jpg') no-repeat center center/cover;
+}
+
+/* Centro per formaggi*/
+.centro-formaggi{
+    background: url('../images/formaggi.webp') no-repeat center center/cover;
+}
+
+/* Centro per pizza */
+.centro-pizza{
+    background: url('../images/image4.png') no-repeat center center/cover;
+}
+
+/* Centro per pasta */
+.centro-pasta{
+    background: url('../images/pasta.webp') no-repeat center center/cover;
+}
+
+/* Centro per salumi */
+.centro-salumi{
+    background: url('../images/salumi.jpg') no-repeat center center/cover;
+}
+
 .text-image-container {
     display: flex;
     align-items: center;
@@ -350,4 +386,25 @@ form button:hover{
         width: 100%;
         padding: 1rem;
     }
+}
+
+/* salumi.html */
+.meat-shadow {
+    box-shadow: 20px 20px 0 #d4af37;
+    border-radius: 5px;
+}
+
+.polaroid-effect {
+    background: white;
+    padding: 15px 15px 40px;
+    transform: rotate(3deg);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.light-bg {
+    background-color: #fff5ee;
+}
+
+.dark-bg {
+    background-color: #f8e8dd;
 }
