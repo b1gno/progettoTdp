@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    max-width: 150px;
+    padding: 0.6rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding-right: 1.5rem;
+    
+
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li button {
+    min-width: 6.5rem;
+}
+
+.centro {
+    background: url('../images/image3.png') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 2rem;
+}
+
+.centro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.central-button {
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 1.2rem;
+    font-size: 1rem;
+}
+
+button{
+    background: #d4af37;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    border: #d4af37;
+    cursor: pointer;
+}
+
+
+.primo-piano {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.primo-piano h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    min-height: 330px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    min-width: 250px;
+}
+
+.product-card h3 {
+    padding: 1rem;
+}
+
+.product-card p {
+    padding: 0 1rem 1rem;
+}
+
+.product-card a {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.newsletter {
+    background: #f4f4f4;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.newsletter form {
+    margin-top: 1rem;
+}
+
+.newsletter input {
+    padding: 0.8rem;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}

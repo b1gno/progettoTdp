@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eccellenze d'Europa | World Excellence</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Stili aggiuntivi per la pagina Europa */
+        .hero-europa {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/europa-hero.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .eccellenze-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+        }
+        .eccellenza-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            min-height: 330px;
+            text-align: center;
+        }
+        .eccellenza-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card-img {
+            padding-top: 20px;
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            min-width: 200px;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .scopri-btn {
+            background-color: #a31621;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .scopri-btn:hover {
+            background-color: #8a1020;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="World Excellence Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html"><button>Home</button></a></li>
+                <li><a href="europa.html" class="active"><button>Europa</button></a></li>
+                <li><a href="america.html"><button>America</button></a></li>
+                <li><a href="africa.html"><button>Africa</button></a></li>
+                <li><a href="asia.html"><button>Asia</button></a></li>
+                <li><a href="oceania.html"><button>Oceania</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-europa" style="background: url('images/europa-background.jpg') no-repeat center center/cover;">
+        <h1>Eccellenze d'Europa</h1>
+        <p>Dai fiordi norvegesi alle coste mediterranee: i sapori e le tradizioni che fanno grande l'Europa</p>
+    </section>
+
+    <section class="eccellenze-container">
+        <h2>Scopri le nostre eccellenze</h2>
+        <div class="eccellenze-grid">
+            <!-- Card 1 -->
+            <div class="eccellenza-card">
+                <img src="images/prosciutto-parma.jpg" alt="Prosciutto di Parma" class="card-img">
+                <div class="card-content">
+                    <h3>Prosciutto di Parma DOP</h3>
+                    <p>Il celebre salume italiano stagionato almeno 12 mesi, prodotto in Emilia-Romagna.</p>
+                    <a href="prosciutto-parma.html"><button class="scopri-btn">Scopri di più</button></a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="eccellenza-card">
+                <img src="images/champagne.jpg" alt="Champagne" class="card-img">
+                <div class="card-content">
+                    <h3>Champagne Francese</h3>
+                    <p>Lo spumante più prestigioso al mondo, prodotto esclusivamente nella regione della Champagne.</p>
+                    <a href="champagne.html"><button class="scopri-btn">Scopri di più</button></a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="eccellenza-card">
+                <img src="images/olio-spagnolo.jpg" alt="Olio d'oliva" class="card-img">
+                <div class="card-content">
+                    <h3>Olio d'oliva spagnolo</h3>
+                    <p>L'oro verde della Spagna, prodotto principalmente in Andalusia con olive secolari.</p>
+                    <a href="olio-spagnolo.html"><button class="scopri-btn">Scopri di più</button></a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="eccellenza-card">
+                <img src="images/gouda.jpg" alt="Formaggio Gouda" class="card-img">
+                <div class="card-content">
+                    <h3>Gouda Olandese</h3>
+                    <p>Il formaggio olandese più esportato al mondo, con una tradizione che risale al Medioevo.</p>
+                    <a href="gouda.html"><button class="scopri-btn">Scopri di più</button></a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="eccellenza-card">
+                <img src="images/salmon-norvegese.jpg" alt="Salmone norvegese" class="card-img">
+                <div class="card-content">
+                    <h3>Salmone norvegese</h3>
+                    <p>Pesce d'eccellenza allevato nei freddi fiordi della Norvegia con metodi sostenibili.</p>
+                    <a href="salmone-norvegese.html"><button class="scopri-btn">Scopri di più</button></a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="eccellenza-card">
+                <img src="images/cioccolato-belga.jpg" alt="Cioccolato belga" class="card-img">
+                <div class="card-content">
+                    <h3>Cioccolato belga</h3>
+                    <p>La tradizione cioccolatiera più rinomata d'Europa, con maestri cioccolatieri dal 1857.</p>
+                    <a href="cioccolato-belga.html"><button class="scopri-btn">Scopri di più</button></a>
+                </div>
+            </div>
+
+            <div class="eccellenza-card">
+                <img src="images/cioccolato-belga.jpg" alt="Cioccolato belga" class="card-img">
+                <div class="card-content">
+                    <h3>Pizza</h3>
+                    <p>La tradizione cioccolatiera più rinomata d'Europa, con maestri cioccolatieri dal 1857.</p>
+                    <a href="cioccolato-belga.html"><button class="scopri-btn">Scopri di più</button></a>
+                </div>
+            </div>
+
+            <div class="eccellenza-card">
+                <img src="images/cioccolato-belga.jpg" alt="Cioccolato belga" class="card-img">
+                <div class="card-content">
+                    <h3>Cioccolato belga</h3>
+                    <p>La tradizione cioccolatiera più rinomata d'Europa, con maestri cioccolatieri dal 1857.</p>
+                    <a href="cioccolato-belga.html"><button class="scopri-btn">Scopri di più</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Vuoi scoprire altre eccellenze?</h2>
+        <p>Iscriviti alla nostra newsletter per ricevere aggiornamenti settimanali</p>
+        <form>
+            <input type="email" placeholder="La tua email" required>
+            <button type="submit">Iscriviti</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+        <p>&copy; 2024 World Excellence. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
