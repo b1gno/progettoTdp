@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutela delle eccellenze Italiane | Vini</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <style>
+        /* Stili specifici per la pagina vini */
+        .hero-vini {
+            background-image: linear-gradient(rgba(0,0,0,0.5), url('../images/vini-bg.jpg'));
+        }
+        
+        .wine-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(to right, #f8f4ec, #fff);
+        }
+        
+        .wine-section:nth-child(even) {
+            background: linear-gradient(to left, #f8f4ec, #fff);
+        }
+    </style>
 </head>
 <body>
     <header>    
@@ -21,40 +36,46 @@
         </nav>
     </header>
 
-    <section class="centro" style="background-image: url('../images/image2.png')">
+    <section class="centro hero-vini">
         <h1>I Vini Italiani</h1>
-        <h2>Un viaggio tra i vigneti che hanno conquistato il mondo</h2>
-        <a href="#products">
-            <button class="central-button">Scopri i vini</button>
-        </a>
+        <h2>Un patrimonio enologico unico al mondo</h2>
     </section>
 
-    <section id="products" class="primo-piano">
-        <h2>I Grandi Vitigni d'Italia</h2>
-        <div class="products-grid">
-            <div class="product-card">
-                <img src="../images/vino1.jpg">
-                <h3>Barolo DOCG</h3>
-                <p>Il re dei vini piemontesi, invecchiato almeno 38 mesi</p>
-                <a href=""><button class="prod-button">Scopri di più</button></a>
+    <section class="wine-section">
+        <div class="text-image-container">
+            <div class="text-content">
+                <h2>Il Barolo: Il Re dei Vini</h2>
+                <p>Prodotto nelle Langhe piemontesi da uve Nebbiolo, il Barolo viene affinato almeno 38 mesi. Caratteristiche principali:</p>
+                <ul>
+                    <li>Colore granato con riflessi arancioni</li>
+                    <li>Aroma complesso di spezie e frutta sotto spirito</li>
+                    <li>Affinamento minimo: 3 anni (5 per la versione Riserva)</li>
+                </ul>
             </div>
-            <div class="product-card">
-                <img src="../images/vino2.jpg">
-                <h3>Chianti Classico</h3>
-                <p>Il simbolo della Toscana con il suo Gallo Nero</p>
-                <a href=""><button class="prod-button">Scopri di più</button></a>
-            </div>
-            <div class="product-card">
-                <img src="../images/vino3.jpg">
-                <h3>Prosecco DOC</h3>
-                <p>Lo spumante più celebre del Veneto</p>
-                <a href=""><button class="prod-button">Scopri di più</button></a>
+            <div class="image-content">
+                <img src="../images/barolo.jpg" alt="Barolo" class="rounded-image">
             </div>
         </div>
     </section>
 
-    <!-- Resto identico alla home -->
-    <section class="newsletter">
+    <section class="wine-section">
+        <div class="text-image-container reversed">
+            <div class="image-content">
+                <img src="../images/chianti.jpg" alt="Chianti" class="wine-bottle">
+            </div>
+            <div class="text-content">
+                <h2>Chianti Classico: Il simbolo toscano</h2>
+                <p>Prodotto nella zona tra Firenze e Siena, deve contenere almeno 80% Sangiovese. Curiosità:</p>
+                <ul>
+                    <li>Il Gallo Nero storico simbolo della Lega del Chianti</li>
+                    <li>Zona di produzione delimitata dal 1716</li>
+                    <li>Affinamento minimo: 12 mesi</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+     <section class="newsletter">
         <h2>Resta Aggiornato</h2>
         <p>Iscriviti per ricevere curiosità e offerte sui prodotti.</p>
         <form>
@@ -72,6 +93,6 @@
         <p>&copy; 2024 World Excellence. Tutti i diritti riservati.</p>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

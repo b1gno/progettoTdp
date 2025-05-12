@@ -292,3 +292,62 @@ form button:hover{
     margin: 0 0.5rem;
     text-decoration: none;
 }
+
+
+/* stile per sub-page */
+.text-image-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.text-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Varianti delle sezioni */
+.reversed {
+    flex-direction: row-reverse;
+}
+
+.rounded-image {
+    border-radius: 50%;
+    border: 5px solid #d4af37;
+}
+
+.wine-bottle {
+    max-height: 400px;
+    transform: rotate(-5deg);
+    border: 3px solid white;
+}
+
+@media (max-width: 768px) {
+    .text-image-container {
+        flex-direction: column;
+    }
+    
+    .reversed {
+        flex-direction: column;
+    }
+    
+    .text-content, .image-content {
+        width: 100%;
+        padding: 1rem;
+    }
+}
