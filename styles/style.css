@@ -20,6 +20,8 @@
     font-family: ubuntu;
 }
 
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -253,7 +255,85 @@ button{
     font-weight: bold;
 }
 
+/* Mappa */
+.scopri {
+    padding: 2rem;
+    text-align: center;
+}
 
+.scopri h1 {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+#lmap {
+    height: 500px;
+    width: 100%;
+}
+#city-info {
+    margin-top: 10px;
+}
+
+.city-card {
+  max-width: 350px;
+  margin: 30px auto;
+  padding: 24px 20px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 32px 0 rgba(60,60,120,0.15);
+  border: 3px solid transparent;
+  background-image:
+    linear-gradient(#fff, #fff),
+    linear-gradient(90deg, #354f52 0%, rgb(193, 163, 98) 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInCard 1s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.city-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  background: linear-gradient(90deg, #354f52, rgb(193, 163, 98));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: popTitle 1s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes popTitle {
+  0% { letter-spacing: -0.1em; opacity: 0;}
+  80% { letter-spacing: 0.05em; opacity: 1;}
+  100% { letter-spacing: 0em; }
+}
+
+.city-distance, .city-food, .city-link {
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  margin: 12px 0 0 0;
+  font-size: 1.08em;
+}
+
+.city-link a {
+  color: #00c3ff;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1.5px dashed #00c3ff;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+.city-link a:hover {
+  color: #ffb300;
+  border-bottom: 1.5px solid #ffb300;
+}
+
+
+/* Parte sotto */
 .newsletter {
     background: #FAEDCD;
     padding: 3rem 2rem;
@@ -407,4 +487,36 @@ form button:hover{
 
 .dark-bg {
     background-color: #f8e8dd;
+}
+
+/* Loader */
+#loader {
+    display: none;
+    border: 40px solid #f3f3f3;
+    border-top: 40px solid #3498db;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    animation: spin 2s linear infinite;
+}
+
+#loader::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 50px #3498db;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
