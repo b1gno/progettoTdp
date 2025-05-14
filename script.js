@@ -51,14 +51,22 @@ function addCityMarker(city) {
 
     cityMarker.bindPopup(
         `<h3>${city.name}</h3>
-        <p>Cibi tipici: ${city.ciboTipico}</p>`
+        <p>Cibi tipici: ${city.ciboTipico}</p>`,
+        { autoPan: false }
     );
 }
 
 function fitMapBounds(userLatLng, cityLatLng) {
-    const bounds = L.latLngBounds([userLatLng, cityLatLng]);
-    map.fitBounds(bounds, { padding: [50, 50] });
+    const bounds = new L.LatLngBounds();
+    bounds.extend(L.latLng(userLatLng[0], userLatLng[1]));
+    bounds.extend(L.latLng(cityLatLng[0], cityLatLng[1]));
+    
+    map.fitBounds(bounds, { 
+        padding: [100, 100],
+        maxZoom: 12 
+    });
 }
+
 
 function displayCityInfo(city) {
     const infoDiv = document.getElementById('city-info');
