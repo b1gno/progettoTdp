@@ -30,12 +30,17 @@ function calcolaDistanza(lat1, lon1, lat2, lon2) {
 
 // Funzione per creare la mappa
 function initMap(lat, lng) {
-    map = L.map('lmap').setView([lat, lng], 12);
-
-    // Aggiunge layer OpenStreetMap
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    var tileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+    });
+
+    map = L.map('map',
+    {
+        zoomControl: true,
+        layers: [tileLayer],
+        maxZoom: 18,
+        minZoom: 6
+    }).setView([lat, lng], 12);
 
     // Marker posizione utente
     userMarker = L.marker([lat, lng]).addTo(map);
