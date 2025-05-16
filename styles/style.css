@@ -105,7 +105,7 @@ nav ul li .nav-button {
 /* parte centrale*/
 .centro {
     background: url('../images/eccellenze.jpg') no-repeat center center/cover;
-    height: 60vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -375,14 +375,21 @@ form button:hover{
     transform: translateY(-3px);
 }
 
-.social-links {
+.info{
     margin-bottom: 1rem;
+    display: flex;
+    text-align: left;
+    justify-content: space-around;
 }
 
-.social-links a {
+.info div{
+    margin: 0 auto;
+}
+
+.info h1 {
     color: #fff;
-    margin: 0 0.5rem;
-    text-decoration: none;
+    text-decoration: underline #ffb300;
+    font-size: 1.3rem;
 }
 
 
