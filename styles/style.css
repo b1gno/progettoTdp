@@ -37,9 +37,17 @@ header {
     align-items: center;
 }
 
+header>div{
+    display: flex;
+}
+
 img{
     max-width: 150px;
     padding: 0.6rem;
+}
+
+img+a>.nav-button{
+    margin-top: 0.6rem;
 }
 
 nav ul {
@@ -50,13 +58,6 @@ nav ul {
 
 nav ul li {
     margin-left: 1.5rem;
-}
-
-nav ul li .nav-button {
-    min-width: 6.5rem;
-    font-size: 1.5rem;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    font-family: suFont;
 }
 
 /* nav button */
@@ -72,6 +73,10 @@ nav ul li .nav-button {
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
   overflow: hidden;
+  font-family: suFont;
+  font-size: 1.5rem;
+  min-width: 6.5rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 .nav-button::before {
@@ -444,6 +449,7 @@ form button:hover{
     height: auto;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    max-height: 400px;
 }
 
 /* Varianti delle sezioni */
