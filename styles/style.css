@@ -273,6 +273,11 @@ button{
     padding: 1rem;
 }
 
+#map {
+    display: flex;
+    justify-content: center;
+}
+
 #lmap {
     height: 500px;
     width: 100%;
