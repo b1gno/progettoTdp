@@ -107,3 +107,35 @@ input[type="radio"] {
     color: black;
 }
 
+.progress-container {
+    width: 100%;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2500px;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 30px;
+    background-color: #d4af37;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    transition: width 0.5s ease; /* animazione fluida */
+    border-radius: 8px;
+}
+
+.complete-glow {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #fff9a3, 0 0 10px #fff9a3;
+    }
+    to {
+        box-shadow: 0 0 20px #fff9a3, 0 0 30px #fff9a3;
+    }
+}

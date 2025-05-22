@@ -177,6 +177,33 @@ class GestoreApp {
         this.gestoreMappa = null;
     }
 
+    init() {
+        this.loader.mostraLoader();
+
+        fetch('citta.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Impossibile caricare citta.json');
+                return response.json();
+            })
+            .then(data => {
+                this.gestoreCitta.setCitta(data);
+
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        position => this.handlePosition(position),
+                        error => this.handleError(error)
+                    );
+                } else {
+                    this.showError("La geolocalizzazione non è supportata da questo browser");
+                    this.loader.nascondiLoader();
+                }
+            })
+            .catch(error => {
+                this.showError(error.message);
+                this.loader.nascondiLoader();
+            });
+    }
+
     handlePosition(position) {
         this.gestoreMappa = new GestoreMappa(position);
         this.gestoreMappa.initMap();
@@ -209,33 +236,6 @@ class GestoreApp {
         if (mapElement) {
             mapElement.innerHTML = `<p>Errore: ${message}</p>`;
         }
-    }
-
-    init() {
-        this.loader.mostraLoader();
-
-        fetch('citta.json')
-            .then(response => {
-                if (!response.ok) throw new Error('Impossibile caricare citta.json');
-                return response.json();
-            })
-            .then(data => {
-                this.gestoreCitta.setCitta(data);
-
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(
-                        position => this.handlePosition(position),
-                        error => this.handleError(error)
-                    );
-                } else {
-                    this.showError("La geolocalizzazione non è supportata da questo browser");
-                    this.loader.nascondiLoader();
-                }
-            })
-            .catch(error => {
-                this.showError(error.message);
-                this.loader.nascondiLoader();
-            });
     }
 }
 

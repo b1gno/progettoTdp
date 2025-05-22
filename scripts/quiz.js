@@ -114,6 +114,8 @@ function nextStep() {
 
     currentQuestionIndex++;
 
+    aggiornaProgressBar();
+
     if (currentQuestionIndex < questions.length) {
         showQuestion(currentQuestionIndex);
     } else {
@@ -123,29 +125,62 @@ function nextStep() {
 
 function showResults() {
     let score = 0;
-    userAnswers.forEach((answer, i) => {
-        if (answer === questions[i].rispostaCorretta) score++;
+    let recapHTML = ``;
+
+    questions.forEach((q, i) => {
+        const userAnswer = userAnswers[i];
+        const isCorrect = userAnswer === q.rispostaCorretta;
+        if (isCorrect) score++;
+
+        recapHTML += `
+            <div style="margin-bottom: 15px; color:black; font-size:15px;">
+                <strong>Domanda ${i + 1}:</strong> ${q.domanda}<br>
+                Tua risposta: <span style="color:${isCorrect ? 'green' : 'red'}">${userAnswer}</span><br>
+                Risposta corretta: <span style="color:${isCorrect ? 'green' : 'red'}"><strong>${q.rispostaCorretta}</strong> ${isCorrect ? "✅" : "❌"}</span>
+            </div>
+        `;
     });
 
+    // Punteggio aggiornato
+    recapHTML = `<h2 style="margin-top: -45px;">Hai totalizzato ${score} su ${questions.length} punti!</h2><hr>` + recapHTML;
+
+    // Reset e mostra risultati
     quizContainer.innerHTML = "";
     submitButton.style.display = "none";
-    resultsContainer.innerHTML = `<h2>Hai totalizzato ${score} su ${questions.length} punti!</h2>`;
-    quizContainer.style=`margin-top: 15%;`
-    if(score>=3){
-        resultsContainer.style="color: green;"
-        // 🎉 Avvia l'effetto coriandoli
+    resultsContainer.innerHTML = recapHTML;
+    quizContainer.style = `margin-top: 5%;`;
+
+    // Coriandoli e messaggio finale
+    if (score >= 3) {
+        resultsContainer.style = "color: green;";
         confetti({
             particleCount: 150,
             spread: 70,
             origin: { y: 0.6 }
         });
+    } else {
+        resultsContainer.style = "color: red;";
+        resultsContainer.innerHTML += `<p style="font-style: italic;">Ritenta, sarai più fortunato… magari dopo un piatto di lasagne! 😅</p>`;
     }
-    else{
-        resultsContainer.style="color: red;"
-        resultsContainer.innerHTML +=   `<p style="font-style: italic;">Ritenta, sarai più fortunato… magari dopo un piatto di lasagne! 😅</p>`
-    }
-    resultsContainer.innerHTML+=`<a href="quiz.html"><button id="submit">Riprova</button></a>`
+
+    resultsContainer.innerHTML += `<a href="quiz.html"><button id="submit">Riprova</button></a>`;
+
+    // ✅ Mostra barra di progresso completa
+
+    const progressBar = document.getElementById('progress-bar');
+    progressBar.style.width = '100%';
+    progressBar.textContent = `${questions.length} / ${questions.length}`;
+    progressBar.classList.add('complete-glow');
+}
+
+function aggiornaProgressBar() {
+    const percentuale = ((currentQuestionIndex) / questions.length) * 100;
+    const barra = document.getElementById('progress-bar');
+    
+    barra.style.width = `${percentuale}%`;
+    barra.textContent = `${currentQuestionIndex} / ${questions.length}`;
 }
 
 showQuestion(currentQuestionIndex);
 submitButton.addEventListener('click', nextStep);
+
