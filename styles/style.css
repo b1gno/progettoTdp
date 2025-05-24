@@ -266,6 +266,7 @@ button{
 .scopri {
     padding: 2rem;
     text-align: center;
+    flex-direction: row;
 }
 
 .scopri h1 {
