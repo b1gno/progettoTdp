@@ -1,0 +1,66 @@
+@startuml
+class GestoreLoader {
+    - _loader
+    - _map
+    - _cityInfo
+    + constructor(loader, map, cityInfo)
+    + get loader()
+    + get map()
+    + get cityInfo()
+    + mostraLoader()
+    + nascondiLoader()
+}
+
+class CalcolatoreDistanza {
+    + calcolaDistanza(lat1, lon1, lat2, lon2)
+}
+
+class GestoreMappa {
+    - _lat
+    - _lng
+    - _map
+    - _cityMarker
+    + constructor(position)
+    + get lat()
+    + get lng()
+    + get map()
+    + get cityMarker()
+    + initMap()
+    + updatePosition(lat, lng)
+    + addCityMarker(city)
+    + fitMapBounds(userLatLng, cityLatLng)
+}
+
+class GestoreCitta {
+    - _citta
+    - _cityInfoElement
+    + constructor(cityInfoElement)
+    + setCitta(citta)
+    + trovaCittaPiuVicina(lat, lng, calcolatore)
+    + mostraInfoCitta(city)
+}
+
+class GestoreApp {
+    - loader : GestoreLoader
+    - calcolatoreDistanza : CalcolatoreDistanza
+    - gestoreCitta : GestoreCitta
+    - gestoreMappa : GestoreMappa
+    + constructor(loader, gestoreCitta)
+    + init()
+    + handlePosition(position)
+    + handleError(error)
+    + showError(message)
+}
+
+GestoreApp --> GestoreLoader : usa
+GestoreApp --> CalcolatoreDistanza : usa
+GestoreApp --> GestoreCitta : usa
+GestoreApp --> GestoreMappa : crea
+
+GestoreMappa --> L.Marker : usa (Leaflet)
+GestoreMappa --> L.Map : usa (Leaflet)
+
+GestoreCitta --> CalcolatoreDistanza : usa (per distanza)
+
+GestoreLoader ..> HTMLElement : contiene riferimento a
+@enduml
