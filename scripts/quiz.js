@@ -27,7 +27,7 @@ const allQuestions = [
     {
         domanda: "Il gorgonzola proviene dalla regione...",
         opzioni: ["Toscana", "Lombardia", "Emilia-Romagna", "Veneto"],
-        rispostaCorretta: "Puglia"
+        rispostaCorretta: "Lombardia"
     },
     {
         domanda: "Il pesto alla genovese contiene...",
