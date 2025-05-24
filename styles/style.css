@@ -266,15 +266,13 @@ button{
 .scopri {
     padding: 2rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .scopri h1 {
     font-size: 2rem;
     padding: 1rem;
-}
-#loader{
-    display: flex;
-    justify-content: center;
 }
 #lmap {
     height: 500px;
