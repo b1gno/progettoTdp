@@ -180,7 +180,7 @@ class GestoreApp {
     init() {
         this.loader.mostraLoader();
 
-        fetch('citta.json')
+        fetch('../citta.json')
             .then(response => {
                 if (!response.ok) throw new Error('Impossibile caricare citta.json');
                 return response.json();
