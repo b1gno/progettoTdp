@@ -346,28 +346,6 @@ button{
 
 
 /* Parte sotto */
-.newsletter {
-    background: #FAEDCD;
-    padding: 3rem 2rem;
-    text-align: center;
-    width: fit-content;
-    margin: 2rem auto;
-    border-radius: 40px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-}
-
-.newsletter form {
-    margin-top: 1rem;
-}
-
-.newsletter input {
-    padding: 0.8rem;
-    width: 300px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-
 footer {
     background: #354f52;
     color: #fff;
